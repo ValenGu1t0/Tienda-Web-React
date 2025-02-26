@@ -1,0 +1,106 @@
+[
+    {          
+        "id_producto": 0,                                 
+        "nombre_producto": "Magic: the Gathering - Lord of the Rings - Draft Booster Box",
+        "precio_producto": "450.000",    
+        "imagen_producto": "img/prod/lotr.webp",     
+        "stock_producto": 6,
+        "id_tcg": 1
+    },
+    {                                              
+        "id_producto": 1,                                 
+        "nombre_producto": "Magic: the Gathering - Ravnica Remastered - Play Booster Box",
+        "precio_producto": "280.000",
+        "imagen_producto": "img/prod/rvc1.webp",          
+        "stock_producto": 3,
+        "id_tcg": 1
+    },
+    {                 
+        "id_producto": 2,         
+        "nombre_producto": "Magic: the Gathering - Magic Core 21 - Draft Booster Box",
+        "precio_producto": "220.000",
+        "imagen_producto": "img/prod/mtg21.webp", 
+        "stock_producto": 1,
+        "id_tcg": 1
+    },
+    {                     
+        "id_producto": 3,       
+        "nombre_producto": "Magic: the Gathering - Modern Horizons 3 - Collector Booster Box",
+        "precio_producto": "250.000",
+        "imagen_producto": "img/prod/mh3.webp",
+        "stock_producto": 0,
+        "id_tcg": 1
+    },
+    {                    
+        "id_producto": 4,       
+        "nombre_producto": "YuGiOh! - Booster Box - Wild Survivors",
+        "precio_producto": "180.000",
+        "imagen_producto": "img/prod/yugi1.webp",
+        "stock_producto": 3,
+        "id_tcg": 2
+    },
+    {              
+        "id_producto": 5,       
+        "nombre_producto": "YuGiOh! - Booster Box - Eternals Nepens",
+        "precio_producto": "150.000",
+        "imagen_producto": "img/prod/yugi2.webp",
+        "stock_producto": 0,
+        "id_tcg": 2
+    },
+    {   
+        "id_producto": 6,       
+        "nombre_producto": "YuGiOh! - Booster Box - Gods of Egypt",
+        "precio_producto": "200.000",
+        "imagen_producto": "img/prod/yugi3.webp",
+        "stock_producto": 2,
+        "id_tcg": 2
+    },
+    {                 
+        "id_producto": 7,       
+        "nombre_producto": "POKEMON TCG - Shrouded Fable - Kingdra Edition",
+        "precio_producto": "100.000",
+        "imagen_producto": "img/prod/pkm1.webp",
+        "stock_producto": 0,
+        "id_tcg": 3
+    },
+    {                 
+        "id_producto": 8,       
+        "nombre_producto": "Magic: the Gathering - Play Booster Box - Foundations - ¡PRE ORDER!",
+        "precio_producto": "360.000",
+        "imagen_producto": "img/prod/mtgf.webp",
+        "stock_producto": 3,
+        "id_tcg": 1
+    },
+    {                  
+        "id_producto": 9,       
+        "nombre_producto": "POKEMON TCG - 2 Booster Tin - Fire",
+        "precio_producto": "25.000",
+        "imagen_producto": "img/prod/pkm2.webp",
+        "stock_producto": 7,
+        "id_tcg": 3
+    },
+    {                  
+        "id_producto": 10,       
+        "nombre_producto": "YuGiOh! - Booster Box - Kyba God's Edition",
+        "precio_producto": "160.000",
+        "imagen_producto": "img/prod/yugi4.webp",
+        "stock_producto": 3,
+        "id_tcg": 2
+    },
+    {                
+        "id_producto": 11,       
+        "nombre_producto": "POKEMON TCG - 2 Booster Tin - Water",
+        "precio_producto": "30.000",
+        "imagen_producto": "img/prod/pkm3.webp",
+        "stock_producto": 6,
+        "id_tcg": 3
+    },
+    {               
+        "id_producto": 12,       
+        "nombre_producto": "Magic: the Gathering - Play Booster Box - Lost Caverns of Ixalan",
+        "precio_producto": "220.000",
+        "imagen_producto": "img/prod/mtgix.webp",
+        "stock_producto": 4,
+        "id_tcg": 1
+    }
+]

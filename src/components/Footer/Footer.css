@@ -1,0 +1,9 @@
+
+
+
+.btn_footer { @apply
+
+    my-4
+    hover:text-orange-500
+    transition
+  }
