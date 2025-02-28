@@ -1,5 +1,6 @@
 # Tienda-Web-React
 
+Proyecto freelance para una tienda de artículos coleccionables, trading card games y juegos de mesa. 
 
 # Proyecto Full-Stack donde usaré:
 
@@ -24,6 +25,7 @@ La base de datos contendrá por un lado productos:
 - id_tcg (Primary Key) - int
 - nombre_categoria - string -> (Ej: "Magic: The Gathering", "Yu-Gi-Oh!", "Pokémon TCG")
 
+---
 
 Y por otro lado usuarios: 
 
