@@ -1,5 +1,4 @@
 
-import './MenuDesplegable.css'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,21 +18,22 @@ function MenuDesplegable() {
         <li className="font-semibold">
           <button onClick={toggleMenu}>Secciones</button>{abrirMenu && (
 
+          // Podría ser dinámico pero prefiero pasar la ruta asi
           <ul className="absolute bg-white mt-7 border-2">
-            <li className="btn-desplegable">
-              <Link to="/magic-the-gathering">Magic: The Gathering</Link>
+            <li className="p-4">
+              <Link to="/categoria/1">Magic: The Gathering</Link>
             </li>
-            <li className="btn-desplegable">
-              <Link to="/magic-the-gathering">Yu-Gi-Oh</Link>
+            <li className="p-4">
+              <Link to="/categoria/2">Yu-Gi-Oh</Link>
             </li>
-            <li className="btn-desplegable">
-              <Link to="/magic-the-gathering">Pokémon TCG</Link>
+            <li className="p-4">
+              <Link to="/categoria/3">Pokémon TCG</Link>
             </li>
-            <li className="btn-desplegable">
-              <Link to="/magic-the-gathering">Accesorios</Link>
+            <li className="p-4">
+              <Link to="/categoria/4">Accesorios</Link>
             </li>
-            <li className="btn-desplegable">
-              <Link to="/magic-the-gathering">Juegos de Mesa</Link>
+            <li className="p-4">
+              <Link to="/categoria/5">Juegos de Mesa</Link>
             </li>
           </ul>)}
           

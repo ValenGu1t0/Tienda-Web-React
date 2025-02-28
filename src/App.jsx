@@ -1,8 +1,10 @@
 
-import './assets/index.css'
+import './assets/index.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import fetchData from './assets/fetchData';
 
 // React Modules
+import { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Componentes Propios
@@ -10,10 +12,28 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Inicio from "./components/Inicio/Inicio";
 import Informacion from "./components/Informacion/Informacion";
-import ListaItems from './components/ListaItems/ListaItems';
+import PaginaCategoria from './components/PaginaCategoria/PaginaCategoria';
+import SeccionItems from './components/SeccionItems/SeccionItems';
 
 
 function App() {
+
+    // Productos va a tener la lista de items en todo momento
+    const [productos, setProductos] = useState([]);
+
+    // Función que actualiza la lista de items
+    const handleUpdate = useCallback(() => {
+
+        fetchData()
+        .then((res) => {  setProductos(res);  })
+
+    }, [])
+
+    useEffect(() => {
+
+        handleUpdate();
+
+    }, [handleUpdate])
 
     return (
 
@@ -23,15 +43,21 @@ function App() {
 
         <Routes>
 
-
+          {/* Página Principal */}
           <Route path="/" element={ 
             <>
               <Inicio />
               <Informacion />
-              <ListaItems />
+              {/* Aca seria tener un componente <Novedades /> que llame a <SeccionItems productos={productos} handleUpdate={handleUpdate} />  */}
+              <SeccionItems productos={productos} handleUpdate={handleUpdate} />
             </> 
           }/>
 
+          {/* Página Plantila para los distintos TCG */}
+          <Route path="/categoria/:categoria_producto" element={ <PaginaCategoria productos={productos} handleUpdate={handleUpdate} /> } />
+
+          {/* Página Plantila cada Producto */}
+          {/* <Route path="/categoria/:id_producto" element={ <PaginaProducto productos={productos} handleUpdate={handleUpdate} /> } /> */}
 
         </Routes>
 
@@ -40,7 +66,6 @@ function App() {
       </BrowserRouter>
 
     );
-
 }
 
 export default App;

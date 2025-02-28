@@ -1,15 +1,14 @@
 
 import Card from "../Card/Card";
 
+// Este es el componente que renderiza los productos necesarios
 function SeccionItems( { productos, handleUpdate } ) {
 
     return (
 
         <div className="flex flex-col justify-center items-center p-4 gap-8">
 
-            <h2 className="text-2xl font-semibold">Novedades</h2>
-
-            {productos.map((prod) =>   
+            {productos.map((prod) =>
 
                 <Card
                 key={prod.id_producto}
