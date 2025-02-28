@@ -1,7 +1,7 @@
 
-import '../assets/index.css'
-
-import MenuDesplegable from './MenuDesplegable/MenuDesplegable'
+import '../../assets/index.css'
+import {Link} from 'react-router-dom'
+import MenuDesplegable from '../MenuDesplegable/MenuDesplegable'
 
 function Nav() {
 
@@ -13,7 +13,7 @@ function Nav() {
 
       <div className="flex flex-row items-center">
         <h2 className="hidden">Cartones y Mazmorras</h2>
-        <img className="max-w-12" src="src/assets/d20.png" alt="logo" />
+        <Link to="/"><img className="max-w-12" src="../src/assets/img/d20.png" alt="logo" /></Link>
       </div>
 
 

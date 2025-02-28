@@ -1,13 +1,14 @@
 # Tienda-Web-React
 
 
---// Proyecto Full-Stack donde usaré:
+# Proyecto Full-Stack donde usaré:
 
 Front-End: HTML5, CSS3, TailwindCSS, JavaScript, React.js, MaterialUI
 
 Back-End: Node.js, Express.js y MySQL
 
---// Base de Datos
+
+# Base de Datos
 
 La base de datos contendrá por un lado productos:
 
@@ -42,14 +43,26 @@ Vamos a codificar este usuario en la DB sin permitir registros adicionales.
 Además, la idea es que si se detecta admin, llevar a un panel distinto.
 
 
---// API -> json
+# API
 
-Asi se ve el producto: 
+Asi se ve un objeto de esta tienda en la API: 
+
 {          
 "id_producto": 0,                                 
 "nombre_producto": "Magic: the Gathering - Lord of the Rings - Draft Booster Box",
 "precio_producto": "450.000",    
-"imagen_producto": "img/prod/lotr.webp",     
+"imagen_producto": "https://raw.githubusercontent.com/ValenGu1t0/Imagenes-Tienda-Web/refs/heads/main/lotr.webp",     
 "stock_producto": 6,
-"id_tcg": 1
+"categoria_producto": 1
 },
+
+Para las fotos, decidi armar un repositorio que funcione como una nube que me guarde las fotos + que me permite
+acceder a ellas a través de una URL, la cual es la propiedad "imagen_producto".
+
+
+
+
+
+# Función y renderizado de la información
+
+working on that

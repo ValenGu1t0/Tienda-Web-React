@@ -1,6 +1,5 @@
 
 import './MenuDesplegable.css'
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,9 +8,8 @@ function MenuDesplegable() {
     // Menu Secciones desplegable
     const [abrirMenu, setAbrirMenu] = useState(false);
 
-   // Cambiamos el estado del menu de oculto a abierto
+    // Cambiamos el estado del menu de oculto a abierto
     function toggleMenu() {  setAbrirMenu(!abrirMenu);  }
-
 
     return (
 
@@ -38,6 +36,7 @@ function MenuDesplegable() {
               <Link to="/magic-the-gathering">Juegos de Mesa</Link>
             </li>
           </ul>)}
+          
         </li>
 
     </ul>

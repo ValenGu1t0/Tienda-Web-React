@@ -1,31 +1,41 @@
 
+import './assets/index.css'
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 // React Modules
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
-import Nav from "./components/Nav";
-import './assets/index.css'
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// Componentes Propios
+import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+import Inicio from "./components/Inicio/Inicio";
+import Informacion from "./components/Informacion/Informacion";
+import ListaItems from './components/ListaItems/ListaItems';
 
 
 function App() {
 
-
     return (
-
 
       <BrowserRouter>
 
-          <Nav />
+        <Nav />
 
-          <Routes>
+        <Routes>
 
-            <Route path="/" /* element={ <MainListaItems /> } */ />
 
-          </Routes>
+          <Route path="/" element={ 
+            <>
+              <Inicio />
+              <Informacion />
+              <ListaItems />
+            </> 
+          }/>
 
-          <Footer />
+
+        </Routes>
+
+        <Footer />
 
       </BrowserRouter>
 
