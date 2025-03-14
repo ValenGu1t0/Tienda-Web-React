@@ -4,7 +4,7 @@ function Informacion() {
 
   return (
 
-    <section className="flex flex-col flex-wrap items-center justify-center my-4 p-8 bg-gray-200">
+    <section className="flex flex-col flex-wrap items-center justify-center my-4 p-8 bg-gray-200 gap-2">
             
             <div className="flex flex-row w-full items-center justify-center gap-2">
                 <img className="max-w-12" src="../src/assets/img/envios.png" alt="envios" />

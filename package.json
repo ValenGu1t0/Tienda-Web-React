@@ -1,7 +1,9 @@
 {
   "name": "proyectos",
+  "author": "Valentino Privitera",
+  "description": "A Full-Stack Web Store made for a freelance project",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,9 +16,6 @@
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.1.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "@mui/icons-material": "^6.4.4",
-    "@mui/lab": "^6.0.0-beta.27",
-    "@mui/material": "^6.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.2.0"

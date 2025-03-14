@@ -1,63 +1,71 @@
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 function MenuDesplegable() {
 
-    // Menu Secciones desplegable
-    const [abrirMenu, setAbrirMenu] = useState(false);
+    // Menu Desplegable
+    const [isOpen, setIsOpen] = useState(false);
 
-    // Cambiamos el estado del menu de oculto a abierto
-    function toggleMenu() {  setAbrirMenu(!abrirMenu);  }
+    // Click afuera del Menu
+    const menuRef = useRef(null);
+    const buttonRef = useRef(null);
+
+    useEffect(() => {
+
+      const handleClickOutside = (event) => {
+
+        if (
+          menuRef.current &&
+          !menuRef.current.contains(event.target) &&
+          buttonRef.current &&
+          !buttonRef.current.contains(event.target)
+        ) {
+          setIsOpen(false);
+        }
+      };
+
+      document.addEventListener("click", handleClickOutside);
+
+      return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
 
     return (
 
-    <ul className="flex flex-row items-center">
+      <>
+        <button className="p-2 text-black cursor-pointer hover:text-orange-500 transition duration-300"
+        onClick={ () => {setIsOpen(!isOpen)} } ref={buttonRef}>
+          <i className="fas fa-bars text-2xl"></i>
+        </button>
 
-        <li className="hidden">Novedades</li>
-        <li className="font-semibold">
-          <button onClick={toggleMenu}>Secciones</button>{abrirMenu && (
+        <ul className={`absolute bg-white top-full left-0 w-full shadow-md transition-all duration-300
+        ${isOpen ? "flex flex-col" : "hidden" }` } ref={menuRef}>
+        
+          <li className="font-medium hover:bg-orange-400 hover:text-white text-center transition duration-200">
+            <Link to="/" className="p-4 block w-full h-full"
+            onClick={ () => {setIsOpen(false)}}>     
+              Inicio
+            </Link>
+          </li>
+            
+          <li className="font-medium hover:bg-orange-400 hover:text-white text-center transition duration-200">
+            <Link to="/nosotros" className="p-4 block w-full h-full"
+            onClick={ () => {setIsOpen(false)}}>    
+              Nosotros
+            </Link>
+          </li>
 
-          // Podría ser dinámico pero prefiero pasar la ruta asi
-          <ul className="absolute bg-white mt-7 border-2">
-            <li className="p-4">
-              <Link to="/categoria/1">Magic: The Gathering</Link>
-            </li>
-            <li className="p-4">
-              <Link to="/categoria/2">Yu-Gi-Oh</Link>
-            </li>
-            <li className="p-4">
-              <Link to="/categoria/3">Pokémon TCG</Link>
-            </li>
-            <li className="p-4">
-              <Link to="/categoria/4">Accesorios</Link>
-            </li>
-            <li className="p-4">
-              <Link to="/categoria/5">Juegos de Mesa</Link>
-            </li>
-          </ul>)}
+          {/* Aca deberia hacer otro desplegable y mostrar todos los TCG */}
+          <li className="font-medium hover:bg-orange-400 hover:text-white text-center transition duration-200" >
+            <Link to="/categoria" className="p-4 block w-full h-full"
+            onClick={ () => {setIsOpen(false)}}>      
+              Secciones
+            </Link>
+          </li>
           
-        </li>
-
-    </ul>
-
-    )
-
+        </ul>
+      </>
+    );
 }
 
 export default MenuDesplegable;
-
-
-/* Documentacion:
-
-Hasta aca cree el menu desplegable con un estado para la <ul>,
-la cual se muestra en true y oculta en false. Además, acomodé
-manualmente la posición del despligue para que quede prolijo.
-
-Por último, agregué links de react-router para después poder
-ir a la pagina con URL?id_tcg=1 por ejemplo.
-
-Si las opciones quedan asi finalmente, eliminar el css y solo 
-poner el p-4 a cada <li>
-
-*/

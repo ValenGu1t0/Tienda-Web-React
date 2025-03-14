@@ -1,4 +1,5 @@
 
+// Otros
 import './assets/index.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import fetchData from './assets/fetchData';
@@ -7,13 +8,17 @@ import fetchData from './assets/fetchData';
 import { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// Componentes Propios
+// Componentes UI
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Inicio from "./components/Inicio/Inicio";
 import Informacion from "./components/Informacion/Informacion";
-import PaginaCategoria from './components/PaginaCategoria/PaginaCategoria';
+import Nosotros from "./components/Nosotros/Nosotros"
+
+// Componentes Render de Productos
 import SeccionItems from './components/SeccionItems/SeccionItems';
+import PaginaCategoria from './components/PaginaCategoria/PaginaCategoria';
+import PaginaProducto from './components/PaginaProducto/PaginaProducto';
 
 
 function App() {
@@ -48,16 +53,25 @@ function App() {
             <>
               <Inicio />
               <Informacion />
-              {/* Aca seria tener un componente <Novedades /> que llame a <SeccionItems productos={productos} handleUpdate={handleUpdate} />  */}
+              {/* Aca seria tener un componente <Novedades /> en vez de <seccionItems> con 4 prod max.
+              que llame a <SeccionItems productos={productos} handleUpdate={handleUpdate} />  */}
               <SeccionItems productos={productos} handleUpdate={handleUpdate} />
             </> 
           }/>
 
-          {/* Página Plantila para los distintos TCG */}
-          <Route path="/categoria/:categoria_producto" element={ <PaginaCategoria productos={productos} handleUpdate={handleUpdate} /> } />
+          <Route path="/nosotros" element={
+            <Nosotros />
+          } />
+
+          {/* Página Plantilla para los distintos TCG */}
+          <Route path="/categoria/:categoria_producto" element={ 
+            <PaginaCategoria productos={productos} handleUpdate={handleUpdate} /> } 
+          />
 
           {/* Página Plantila cada Producto */}
-          {/* <Route path="/categoria/:id_producto" element={ <PaginaProducto productos={productos} handleUpdate={handleUpdate} /> } /> */}
+          <Route path="/producto/:id_producto" element={
+            <PaginaProducto productos={productos} handleUpdate={handleUpdate} /> } 
+          /> 
 
         </Routes>
 
@@ -69,8 +83,6 @@ function App() {
 }
 
 export default App;
-
-
 
 
 /* 
@@ -89,4 +101,4 @@ export default App;
   "stock_producto": 6,
   "id_tcg": 1
   },
-  */ 
+*/ 
