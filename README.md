@@ -2,11 +2,11 @@
 
 Proyecto freelance para una tienda de artículos coleccionables, trading card games y juegos de mesa. 
 
-# Proyecto Full-Stack donde usaré:
+# Proyecto Full-Stack MERN:
 
-Front-End: HTML5, CSS3, TailwindCSS, JavaScript, React.js, MaterialUI
+- Front-End: HTML5, CSS3, TailwindCSS, JavaScript, React.js, MaterialUI
 
-Back-End: Node.js, Express.js y MySQL
+- Back-End: Node.js, Express.js y MongoDB
 
 
 # Base de Datos
@@ -25,7 +25,7 @@ La base de datos contendrá por un lado productos:
 - id_tcg (Primary Key) - int
 - nombre_categoria - string -> (Ej: "Magic: The Gathering", "Yu-Gi-Oh!", "Pokémon TCG")
 
----
+--
 
 Y por otro lado usuarios: 
 
@@ -55,13 +55,11 @@ Asi se ve un objeto de esta tienda en la API:
 "precio_producto": "450.000",    
 "imagen_producto": "https://raw.githubusercontent.com/ValenGu1t0/Imagenes-Tienda-Web/refs/heads/main/lotr.webp",     
 "stock_producto": 6,
-"categoria_producto": 1
-},
+"categoria_producto": 1,
+}
 
 Para las fotos, decidi armar un repositorio que funcione como una nube que me guarde las fotos + que me permite
 acceder a ellas a través de una URL, la cual es la propiedad "imagen_producto".
-
-
 
 
 
